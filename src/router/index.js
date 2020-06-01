@@ -13,6 +13,9 @@ const login = () => import("components/login")
 const home = () => import("components/home")
 const welcome = () => import('components/welcome')
 const users = () => import('components/user/users')
+const rights = () => import('components/power/rights')
+const roles = () => import('components/power/roles')
+const cate = () => import('components/goods/cate')
 
 Vue.use(VueRouter)
 
@@ -25,7 +28,13 @@ Vue.use(VueRouter)
         path:"/home",
         component:home,
         redirect:'/welcome',
-        children:[{path:"/welcome",component:welcome},{path:"/users",component:users}]
+        children:[
+          {path:"/welcome",component:welcome},
+          {path:"/users",component:users},
+          {path:"/rights",component:rights},
+          {path:"/roles",component:roles},
+          {path:"/categories",component:cate}
+        ]
       }
   ]
 

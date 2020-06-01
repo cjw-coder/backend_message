@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import 'plugins/element.js'
 import axios from 'axios'
+import treeTable from 'vue-table-with-tree-grid'
 
+import 'plugins/element.js'
 import 'assets/css/global.css'
 import 'assets/font/iconfont.css'
 
@@ -15,6 +16,8 @@ axios.interceptors.request.use(config => {
   return config
 })
 Vue.prototype.$axios = axios
+
+Vue.component('tree-table',treeTable)
 
 new Vue({
   router,
