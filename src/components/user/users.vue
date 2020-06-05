@@ -19,8 +19,7 @@
         <el-table
           :data="userList"
           border
-          stripe
-          >
+          stripe>
           <el-table-column type="index"></el-table-column>
           <el-table-column prop="username" label="姓名"></el-table-column>
           <el-table-column prop="email" label="邮箱"></el-table-column>

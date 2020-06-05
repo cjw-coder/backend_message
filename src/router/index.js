@@ -16,6 +16,7 @@ const users = () => import('components/user/users')
 const rights = () => import('components/power/rights')
 const roles = () => import('components/power/roles')
 const cate = () => import('components/goods/cate')
+const params = () => import('components/goods/params')
 
 Vue.use(VueRouter)
 
@@ -33,7 +34,8 @@ Vue.use(VueRouter)
           {path:"/users",component:users},
           {path:"/rights",component:rights},
           {path:"/roles",component:roles},
-          {path:"/categories",component:cate}
+          {path:"/categories",component:cate},
+          {path:"/params",component:params}
         ]
       }
   ]

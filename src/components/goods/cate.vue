@@ -25,7 +25,7 @@
                 <el-tag type="warning" v-else-if="scope.row.cat_level === 1">二级</el-tag>
                 <el-tag type="success" v-else>三级</el-tag>
             </template>
-            <template slot="operation" slot-scope="scope">
+            <template slot="operation" slot-scope="">
                 <el-button type="primary" icon="el-icon-edit" size="mini">编辑</el-button>
                 <el-button type="danger" icon="el-icon-delete" size="mini">删除</el-button>
             </template>
