@@ -19,6 +19,7 @@ const cate = () => import('components/goods/cate')
 const params = () => import('components/goods/params')
 const goodslist = () => import('components/goods/list')
 const add = () => import('components/goods/add')
+const orders = () => import('components/order/order')
 
 Vue.use(VueRouter)
 
@@ -39,7 +40,8 @@ Vue.use(VueRouter)
           {path:"/categories",component:cate},
           {path:"/params",component:params},
           {path:"/goods",component:goodslist},
-          {path:"/goods/add",component:add}
+          {path:"/goods/add",component:add},
+          {path:"/orders",component:orders}
         ]
       }
   ]
