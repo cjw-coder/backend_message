@@ -20,6 +20,7 @@ const params = () => import('components/goods/params')
 const goodslist = () => import('components/goods/list')
 const add = () => import('components/goods/add')
 const orders = () => import('components/order/order')
+const reports = () => import('components/report/report')
 
 Vue.use(VueRouter)
 
@@ -41,7 +42,8 @@ Vue.use(VueRouter)
           {path:"/params",component:params},
           {path:"/goods",component:goodslist},
           {path:"/goods/add",component:add},
-          {path:"/orders",component:orders}
+          {path:"/orders",component:orders},
+          {path:"/reports",component:reports}
         ]
       }
   ]
