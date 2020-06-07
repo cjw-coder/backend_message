@@ -1,8 +1,10 @@
-# backend_message
+# backend_management
 
-## Project setup
+## 启动
 ```
-npm install
+  需要配合backend_management使用
+  开发环境: npm run serve
+  生存环境: npm run build
 ```
 
 ### Compiles and hot-reloads for development
