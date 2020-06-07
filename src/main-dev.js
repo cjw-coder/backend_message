@@ -8,18 +8,19 @@ import 'plugins/element.js'
 import 'assets/css/global.css'
 import 'assets/font/iconfont.css'
 
-import VueQuillEditor from 'vue-quill-editor'
-import 'quill/dist/quill.core.css'
-import 'quill/dist/quill.snow.css'
-import 'quill/dist/quill.bubble.css'
-
-Vue.config.productionTip = false
-
-Vue.use(VueQuillEditor)
+import Nprogress from 'nprogress'
+import 'nprogress/nprogress.css'
 
 axios.defaults.baseURL = "http://127.0.0.1:8888/api/private/v1/"
+
 axios.interceptors.request.use(config => {
+  Nprogress.start()
+
   config.headers.Authorization = window.sessionStorage.getItem('token')
+  return config
+})
+axios.interceptors.response.use(config => {
+  Nprogress.done()
   return config
 })
 Vue.prototype.$axios = axios
@@ -39,6 +40,16 @@ Vue.filter('dateFormat',function(originVal){
 
   return  `${y}-${M}-${d} ${h}:${m}:${s}`
 })
+
+import VueQuillEditor from 'vue-quill-editor'
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
+
+Vue.use(VueQuillEditor)
+
+
+Vue.config.productionTip = false
 
 new Vue({
   router,

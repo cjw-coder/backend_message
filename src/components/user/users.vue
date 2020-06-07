@@ -262,12 +262,11 @@ export default {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
           type: 'warning'
-        },
+        }
         ).catch(err => err)
         if(confirmResult !== "confirm"){
           return this.$message.info("已取消删除")
         }
-        console.log(id)
         const {data:res} = await this.$axios.delete(`/users/${id}`)
         if(res.meta.status !== 200){
           return this.$message.error("删除失败")

@@ -30,9 +30,8 @@
                         {{scope.row.add_time | dateFormat}}
                     </template>
                 </el-table-column>
-                <el-table-column label="操作" width="140">
+                <el-table-column label="操作" width="80">
                     <template slot-scope="scope">
-                        <el-button type="primary" icon="el-icon-edit" size="mini"></el-button>
                         <el-button type="danger" icon="el-icon-delete" size="mini" @click="handleDelGoods(scope.row.goods_id)"></el-button>
                     </template>
                 </el-table-column>
@@ -72,7 +71,6 @@ export default {
             if(res.meta.status !== 200){
                 return this.$message.error("获取商品列表失败")
             }
-            console.log(res)
             this.goodsList = res.data
         },
         handleSizeChange(newSize){
