@@ -4,7 +4,7 @@
 ```
   需要配合backend_management_api项目使用
   开发环境: npm run serve
-  生存环境: npm run build
+  生产环境: npm run build
 ```
 
 ### 项目描述
