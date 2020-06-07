@@ -16,7 +16,7 @@
 ### 相关插件和库的使用
 ```
 lodash，实现对对象的深拷贝以及合并对象的操作
-echarts，实现了绘制的图表功能
+echarts，实现了绘制图表功能
 nprogress，实现了浏览器窗口顶部的进度条功能
 vue-quill-eidtor,实现文本编辑框功能
 vue-table-with-tree-grid,实现了对树形数据进行处理输出的操作
