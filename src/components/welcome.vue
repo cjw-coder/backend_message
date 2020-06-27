@@ -1,6 +1,7 @@
 <template>
     <div>
-        <h3>welcome</h3>
+        <h2>welcome</h2>
+        <h3>欢迎您的到来!</h3>
     </div>
 </template>
 
